@@ -1,0 +1,168 @@
+div.controlSelect{
+    width: 500px;
+    height: 450px;
+    background: black;
+    position: relative;
+    z-index: 5000;
+   
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 25px;
+   border: solid #D0D0D0 1px;
+ }
+ 
+.leftControls, .rightControls{
+	display : none;
+}
+ 
+#cr-stage{
+    width: 500px;
+    height: 500px;
+
+    position: relative;
+    font-size: 200%;
+    display: none;
+    
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #D0D0D0 1px;
+}
+
+#pause{
+	display: none;
+	position: absolute;
+	top: 26px;
+	width: 250px;
+	right: 50px;
+
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(255, 255, 255);
+	/* RGBa with 0.6 opacity */
+	background: rgba(255, 255, 255, .5);
+	
+	border: solid #D0D0D0 1px;
+	padding: 10px;
+	font-size: 80%;
+}
+
+#promo{
+	overflow: visible;
+}
+
+#pause a#pauseButton{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+#pause .promoMsg{
+	margin: 0px;
+}
+
+#pause .stHead{
+	margin: 0px;
+}
+#pause h4{
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(255, 255, 255);
+	/* RGBa with 0.6 opacity */
+	background: rgba(255, 255, 255, .5);
+	
+	height: 26px;
+	display: inline-block;
+}
+
+.stHead{
+	height: 30px;
+}
+
+div#game{
+	margin: 25px;
+}
+
+
+#content, .stHead h4, .promoMsg{
+	font-size: 150%;
+	line-height: 23px;
+}
+
+.controlSelect{
+	padding: 25px;
+	color: white;
+}
+
+.controlLabel{
+	width: 150px;
+	display: inline-block;
+}
+
+.controls{
+	padding-left:25px;
+}
+
+#pacmanControls{
+	color: yellow;
+	padding-bottom: 15px;
+	padding-top: 100px;
+}
+
+a#startButton, a#pauseButton{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 70px;
+}
+
+.stHead{
+	margin-bottom: 30px;
+	margin-top: 45px;
+}
+
+
+#content .promoMsg{
+	font-size: 100%;
+}
+
+
+form.promoMsg{
+	margin: 0px;
+}
+
+div.promoMsg a.actBtn{
+	float: none;
+}
+
+form.promoMsg .actBtn{
+	display: inline;
+	float: none;
+	
+	height: 27px;
+	vertical-align: bottom;
+	width: 100px;
+	margin-top: 0px;
+	padding: 0px;
+}
+
+header#header {
+	height: 660px !important;
+}
+
+#logoText{
+	color: #DF2F17;
+	font-size: 400%;
+	font-style: italic;
+	width: 400%;
+	margin-top: 60px;
+}
+
+#imageBox{
+	height: 640px;
+	background: #b4b2bf;
+	background: -moz-radial-gradient(center, ellipse cover,  #b4b2bf 0%, #878f93 40%, #666874 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#b4b2bf), color-stop(40%,#878f93), color-stop(100%,#666874));
+	background: -webkit-radial-gradient(center, ellipse cover,  #b4b2bf 0%,#878f93 40%,#666874 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #b4b2bf 0%,#878f93 40%,#666874 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #b4b2bf 0%,#878f93 40%,#666874 100%);
+	background: radial-gradient(center, ellipse cover,  #b4b2bf 0%,#878f93 40%,#666874 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4b2bf', endColorstr='#666874',GradientType=1 );
+}

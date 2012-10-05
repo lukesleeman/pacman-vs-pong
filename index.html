@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta content="text/html; charset=utf-8"/>
+    <meta name="distribution" content="global"/>
+    <meta name="robots" content="follow, all"/>
+    <meta name="googlebot" content="index, follow"/>
+    <meta name="revisit-after" content="10 days"/>
+    <meta name="keywords" content="Pacman pong game html5 javascript reddit" />
+    <meta name="description" content="Pacman vs Pong game done in html5"/>
+    
+    <title>Pacman vs Pong</title>
+
+
+    <!-- CSS Libraries and codes -->
+    <link rel="stylesheet" type="text/css" href="files/codes/css/reset.css" />
+    <link rel="stylesheet" href="files/codes/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="files/codes/css/prettyPhoto.css" type="text/css" />
+
+	<!-- Modernizr for HTML5 -->
+	<script style="display: none;" src="files/codes/js/modernizr-2.0.6.js"></script>
+	
+	<!-- My stuff -->
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+	<script type="text/javascript" src="crafty-min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="game.js"></script>
+	
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32516275-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+                        <div id="fb-root"></div>
+						<script>(function(d, s, id) {
+						  var js, fjs = d.getElementsByTagName(s)[0];
+						  if (d.getElementById(id)) return;
+						  js = d.createElement(s); js.id = id;
+						  js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+						  fjs.parentNode.insertBefore(js, fjs);
+						}(document, 'script', 'facebook-jssdk'));</script>
+
+	<header id="header"  class="largeSlides">
+    	<div class="bar"></div><!-- the top border -->
+        <section id="navNLogo">
+        	<div class="wrap">
+                <div id="logo">
+                	
+                	
+                	<div id="logoText">
+                	Pacman VS Pong
+                    </div>
+                </div>
+                
+            </div><!-- end of .wrap -->
+        </section><!-- end of #nav -->
+    	<section id="imageBox">
+
+    		
+            <div class="controlSelect promoMsg">
+	
+			<div id="pacmanControls">
+				<span class="controlLabel">Pacman:</span> Controls: Arrow keys</div>
+			
+				<span class="controlLabel">Left Paddle: </span>
+				<input type="radio" name="left" value="leftComputer" id="leftComputer" checked="true" onclick="$('.leftControls').fadeOut();"/> <label for="leftComputer">Computer</label> 
+				<input type="radio" name="left" value="leftHuman" id="leftHuman" onclick="$('.leftControls').fadeIn();" /><label for="leftHuman">Human</label>
+				<span class="controls leftControls">Controls : W/S</span>
+				</br>
+				
+				<span class="controlLabel">Right Paddle:</span>
+				<input type="radio" name="right" value="rightComputer" id="rightComputer" checked="true"  onclick="$('.rightControls').fadeOut();"/> <label for="rightComputer">Computer</label> 
+				<input type="radio" name="right" value="rightHuman" id="rightHuman" onclick="$('.rightControls').fadeIn();" /><label for="rightHuman">Human</label>
+				<span class="controls rightControls">Controls : U/J</span>
+				</br>
+				
+				<span class="controlLabel">Speed: </span>
+				<input type="radio" name="speed" value="slow" id="slow" checked="true"/> <label for="slow">Slow</label> 
+				<input type="radio" name="speed" value="fast" id="fast"  /><label for="fast">Fast</label>
+				</br>
+				
+				<a href="#" onclick="runGame();" class="actBtn" id="startButton">Start</a>
+			</div>
+			<div id="cr-stage"></div>
+			
+			<div id="pause">
+				<div class="promoMsg">
+					
+					<div class="stHead"><h4>Controls</h4></div>
+					</hr>
+					<div>Pacman: Arrow keys</div>
+					<div class="leftControls" >Left Paddle: W/S</div>
+					<div class="rightControls">Right paddle: U/J</div>
+					
+					<a href="#" onclick="pauseGame();" class="actBtn" id="pauseButton">Pause</a>
+				</div>
+				<div class="promoMsg" id="promo">
+					<div class="stHead"><h4>Stuff</h4></div>
+					We like your likes!  If you enjoyed the game please share it around:
+					<div class="fb-like" data-href="http://www.grafting-tool.com/pacmanvspong/" data-send="false" data-width="450" data-show-faces="false" data-layout="button_count"></div>
+					</br></br>
+					Intrested in an android or iOS version for 99c?  Enter your e-mail address and I will
+					let you know if I make one:
+					<form action="https://docs.google.com/spreadsheet/formResponse?formkey=dHJwRklyam9DNEc4YlN1MlIxX3pzWHc6MQ&amp;embedded=true&amp;ifq" method="POST" id="ss-form" class="promoMsg">
+
+					
+					<!-- <label class="ss-q-title" for="entry_0">E-Mail address
+					<span class="ss-required-asterisk">*</span></label> -->
+					<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0">
+					<input type="hidden" name="pageNumber" value="0">
+					<input type="hidden" name="backupCache" value="">
+					<input type="submit" name="submit" value="Submit" class="actBtn"></form>
+					</br>
+    	
+				</div>
+			</div>
+
+
+        </section><!-- end of #imageBox -->
+    </header><!-- end of #header -->
+    
+    <section id="content">
+    
+		<div class="stHead"><h4>What is this?</h4></div>
+		
+		A few days ago I saw <a href="http://imgur.com/xjMyA" class="actBtn">this</a>  animated gif on reddit. 
+		I immediately thought - that would be easy to make. Followed by - It wouldn't possibly take more than an hour or two! 
+		</br></br>
+		So here we are, after 4 very late nights I have a fully functional game of Pong vs Packman! 
+		I hope you enjoy playing it as much as I enjoyed creating it. 
+		If you have fun please share it with your friends.
+		</br></br>
+<div class="fb-like" data-href="http://www.grafting-tool.com/pacmanvspong/" data-send="false" data-width="450" data-show-faces="true"></div>
+		
+		<div class="stHead"><h4>Who are you?</h4></div>
+		Just your average garden variety programmer. I do big corporate java things during the 
+		day and occasionally hack out something fun during a late night. 
+		If you really, really want to get in contact with me, my e-mail is luke sleeman at gmail dot com.
+		
+		<div class="stHead"><h4>I would totally pay .99c for this on iOS/Android</h4></div>
+		Glad to hear it! If enough people are interested, I'll work on making it avaliable. 
+		</br>
+    	If you leave you e-mail address I will notify you when its done: 
+    	
+    	<!--
+    	<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dHJwRklyam9DNEc4YlN1MlIxX3pzWHc6MQ" width="760" height="200" frameborder="0" marginheight="0" marginwidth="0" allowtransparency="yes">Loading...</iframe>
+    	-->
+    	
+    	
+    	<form action="https://docs.google.com/spreadsheet/formResponse?formkey=dHJwRklyam9DNEc4YlN1MlIxX3pzWHc6MQ&amp;embedded=true&amp;ifq" method="POST" id="ss-form" class="promoMsg">
+
+		<br>
+		<label class="ss-q-title" for="entry_0">E-Mail address
+		<span class="ss-required-asterisk">*</span></label>
+		<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0">
+		<input type="hidden" name="pageNumber" value="0">
+		<input type="hidden" name="backupCache" value="">
+		<input type="submit" name="submit" value="Submit" class="actBtn"></form>
+    	</br>
+    	
+    	PS: E-mails will be used for notifying you of an iOs/Android port ONLY. I hate spam!
+    
+	
+    	
+    </section><!-- end of #content -->
+    
+    <footer id="footer">
+    	<div class="top">
+        	<div class="wrap">
+        
+                <section class="cols">
+                    <div class="oneThird">
+.
+						
+			                    </div> 
+                    <div class="oneThird">
+We like your likes: 
+<div class="fb-like" data-href="http://www.grafting-tool.com/pacmanvspong/" data-send="false" data-width="450" data-show-faces="true"></div>
+
+                    </div> 
+                    <div class="oneThird">
+                    .
+                 </div> 
+                </section> 
+            </div><!-- end of .wrap -->
+		</div><!-- end of .top -->
+        <section class="bottom">
+        	<div class="contents">
+                <p class="copy">Copyright &copy; 2012, <a href="#">Circle</a>. All Rights Reserved.</p>
+            </div><!-- end of .contents -->
+        </section><!-- end of .bottom -->
+    </footer><!-- end of #footer -->
+
+<!-- JavaScript Libraries and Codes -->
+
+
+
+
+	<!-- This file starts/initializes all js functionalities throughout
+    	this site and houses some more scripts or libraries. -->
+    <script style="display: none;" src="files/codes/js/init.js"></script>
+	
+
+<!-- Weird IE specific codes -->
+	<!--[if lt IE 9]>
+    	<link rel="stylesheet" type="text/css" href="files/codes/css/ie.css" media="all" />
+	    <script src="files/codes/js/ie.js"></script>
+    <![endif]-->
+	<!--[if IE 7]>
+    	<link rel="stylesheet" type="text/css" href="files/codes/css/ie7.css" media="all" />
+    <![endif]-->
+    <!--[if IE 8]>
+    	<link rel="stylesheet" type="text/css" href="files/codes/css/ie8.css" media="all" />
+    <![endif]-->
+    <!--[if IE 9]>
+    	<link rel="stylesheet" type="text/css" href="files/codes/css/ie9.css" media="all" />
+    <![endif]-->
+
+    <link rel="stylesheet" id="colors" href="files/codes/css/colors/paste-coffee.css" type="text/css" />
+
+</body>
+</html>

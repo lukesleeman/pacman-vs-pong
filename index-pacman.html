@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<head>	
+	<script type="text/javascript" src="crafty-min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="game.js"></script>
+</head>
+<body>
+
+<div class="controlSelect">
+	
+	
+
+		<div id"pacmanControls">Pacman - Controls: Arrow keys</div>
+		
+		Left Paddle: 
+		<input type="radio" name="left" value="leftComputer" id="leftComputer" checked="true" onclick="$('#leftControls').fadeOut();"/> <label for="leftComputer">Computer</label> 
+		<input type="radio" name="left" value="leftHuman" id="leftHuman" onclick="$('#leftControls').fadeIn();" /><label for="leftHuman">Human</label>
+		<span class="controls" id="leftControls">Controls : W/S</span>
+		</br>
+		
+		Right Paddle:
+		<input type="radio" name="right" value="rightComputer" id="rightComputer" checked="true"  onclick="$('#rightControls').fadeOut();"/> <label for="rightComputer">Computer</label> 
+		<input type="radio" name="right" value="rightHuman" id="rightHuman" onclick="$('#rightControls').fadeIn();" /><label for="rightHuman">Human</label>
+		<span class="controls" id="rightControls">Controls : U/J</span>
+		</br>
+		
+		Speed: 
+		<input type="radio" name="speed" value="slow" id="slow" checked="true"/> <label for="slow">Slow</label> 
+		<input type="radio" name="speed" value="fast" id="fast"  /><label for="fast">Fast</label>
+		</br>
+		
+		
+<button onclick="runGame();">Start</button>
+
+
+</div>
+<div id="cr-stage"></div>
+
+<script type="text/javascript">
+	
+		var gameInfo = {
+		height : 500, width :500 ,
+		paddle_height: 70, paddle_width : 20,
+		pacman_size : 60,
+		paddle_start_y : 200,
+		speed : 4,
+		paddle_speed : 7,
+		animation_speed: 15,
+		paddle_left_human : false,
+		paddle_right_human : false,
+		};
+	
+	Crafty.init(gameInfo.height, gameInfo.width);
+Crafty.background('black');
+
+
+</script>
+Some more stuff
+</body>
+</html>
